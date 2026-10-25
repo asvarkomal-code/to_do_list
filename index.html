@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plan My Day</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+ 
+  <main class="app">
+    <header>
+      <h1 id="greeting">Hello!</h1>
+      <p id="today"></p>
+    </header>
+ 
+    <!-- ONE CARD: weather on top, todo list below -->
+    <div class="card">
+ 
+      <!-- WEATHER -->
+      <section class="weather" id="weather" aria-labelledby="weather-h">
+        <h2 id="weather-h" class="sr-only">Weather</h2>
+        <form id="city-form">
+          <input type="text" id="city-input" placeholder="Search a city" aria-label="City name" required>
+          <button type="submit" class="btn-sun">Show</button>
+        </form>
+        <div id="weather-out" class="msg">Type a city name to see its weather.</div>
+      </section>
+ 
+      <!-- TODO LIST -->
+      <section class="todo" aria-labelledby="todo-h">
+        <div class="card-head">
+          <h2 id="todo-h">My tasks</h2>
+          <span id="count" class="pill"></span>
+        </div>
+ 
+        <div class="progress" aria-hidden="true"><div id="bar"></div></div>
+ 
+        <form id="todo-form">
+          <input type="text" id="todo-input" placeholder="What do you want to get done?" aria-label="New task" required>
+          <button type="submit" class="btn-main">Add</button>
+        </form>
+ 
+        <ul id="list"></ul>
+ 
+        <button class="btn-link" id="clear" type="button">Clear completed</button>
+      </section>
+ 
+    </div>
+  </main>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
+ 
